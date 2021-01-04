@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.icfolson.aem.groovy.console</groupId>
+        <groupId>org.cid15.aem.groovy.console</groupId>
         <artifactId>aem-groovy-console</artifactId>
         <version>17.0.0-SNAPSHOT</version>
     </parent>
@@ -56,8 +56,8 @@
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Bundle-Name>${project.name}</Bundle-Name>
                         <Bundle-Vendor>${project.organization.name}</Bundle-Vendor>
-                        <Export-Package>!*.impl,com.icfolson.aem.groovy.console.*</Export-Package>
-                        <Sling-Model-Packages>com.icfolson.aem.groovy.console.components</Sling-Model-Packages>
+                        <Export-Package>!*.impl,org.cid15.aem.groovy.console.*</Export-Package>
+                        <Sling-Model-Packages>org.cid15.aem.groovy.console.components</Sling-Model-Packages>
                         <DynamicImport-Package>*</DynamicImport-Package>
                     </instructions>
                 </configuration>

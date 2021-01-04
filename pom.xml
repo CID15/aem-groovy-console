@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.icfolson.aem.groovy.console</groupId>
+    <groupId>org.cid15.aem.groovy.console</groupId>
     <artifactId>aem-groovy-console</artifactId>
     <packaging>pom</packaging>
     <version>17.0.0-SNAPSHOT</version>
@@ -24,17 +24,17 @@
         <module>ui.content</module>
     </modules>
 
-    <url>https://github.com/icfnext/aem-groovy-console</url>
+    <url>https://github.com/cid15/aem-groovy-console</url>
 
     <organization>
-        <name>ICF Next</name>
-        <url>http://www.icfnext.com</url>
+        <name>CID 15</name>
+        <url>https://www.cid15.org</url>
     </organization>
 
     <developers>
         <developer>
             <name>Mark Daugherty</name>
-            <email>mark.daugherty@avionos.com</email>
+            <email>mark.r.daugherty@gmail.com</email>
         </developer>
     </developers>
 
@@ -47,14 +47,14 @@
     </licenses>
 
     <scm>
-        <connection>scm:git:git@github.com:icfnext/aem-groovy-console.git</connection>
-        <developerConnection>scm:git:git@github.com:icfnext/aem-groovy-console.git</developerConnection>
-        <url>https://github.com/icfnext/aem-groovy-console</url>
+        <connection>scm:git:git@github.com:cid15/aem-groovy-console.git</connection>
+        <developerConnection>scm:git:git@github.com:cid15/aem-groovy-console.git</developerConnection>
+        <url>https://github.com/cid15/aem-groovy-console</url>
     </scm>
 
     <issueManagement>
         <system>GitHub</system>
-        <url>https://github.com/icfnext/aem-groovy-console/issues</url>
+        <url>https://github.com/cid15/aem-groovy-console/issues</url>
     </issueManagement>
 
     <distributionManagement>
@@ -76,7 +76,6 @@
         <aem.port>4502</aem.port>
         <aem.publish.host>localhost</aem.publish.host>
         <aem.publish.port>4503</aem.publish.port>
-        <aem.context.path/>
         <vault.user>admin</vault.user>
         <vault.password>admin</vault.password>
         <package.group>aem-groovy-console</package.group>

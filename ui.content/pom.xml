@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.icfolson.aem.groovy.console</groupId>
+        <groupId>org.cid15.aem.groovy.console</groupId>
         <artifactId>aem-groovy-console</artifactId>
         <version>17.0.0-SNAPSHOT</version>
     </parent>
@@ -39,7 +39,7 @@
                     </validatorsSettings>
                     <dependencies>
                         <dependency>
-                            <groupId>com.icfolson.aem.groovy.console</groupId>
+                            <groupId>org.cid15.aem.groovy.console</groupId>
                             <artifactId>aem-groovy-console-ui.apps</artifactId>
                         </dependency>
                     </dependencies>
@@ -59,12 +59,12 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.icfolson.aem.groovy.console</groupId>
+            <groupId>org.cid15.aem.groovy.console</groupId>
             <artifactId>aem-groovy-console-bundle</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.icfolson.aem.groovy.console</groupId>
+            <groupId>org.cid15.aem.groovy.console</groupId>
             <artifactId>aem-groovy-console-ui.apps</artifactId>
             <version>${project.version}</version>
             <type>zip</type>
