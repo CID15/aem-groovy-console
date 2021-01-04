@@ -1,8 +1,10 @@
 # AEM Groovy Console
 
+[CID 15](https://www.cid15.org)
+
 ## Overview
 
-The AEM Groovy Console provides an interface for running [Groovy](http://www.groovy-lang.org/) scripts in Adobe Experience Manager.  Scripts can be created to manipulate content in the JCR, call OSGi services, or execute arbitrary code using the AEM, Sling, or JCR APIs.  After ainstalling the package in AEM (instructions below), see the [console page](http://localhost:4502/apps/groovyconsole.html) for documentation on the available bindings and methods.  Sample scripts are included in the package for reference.
+The AEM Groovy Console provides an interface for running [Groovy](http://www.groovy-lang.org/) scripts in Adobe Experience Manager.  Scripts can be created to manipulate content in the JCR, call OSGi services, or execute arbitrary code using the AEM, Sling, or JCR APIs.  After installing the package in AEM (instructions below), see the [console page](http://localhost:4502/groovyconsole) for documentation on the available bindings and methods.  Sample scripts are included in the package for reference.
 
 ![Screenshot](src/site/screenshot.png)
 
@@ -27,31 +29,17 @@ Groovy Console Version(s) | AEM Version(s)
 
 ## Installation
 
-1. [Download the console package](https://github.com/icfnext/aem-groovy-console/releases/download/14.0.0/aem-groovy-console-14.0.0.zip).  For previous versions, tags can be checked out from GitHub and built directly from the source (e.g. `mvn install`).
+1. [Download the console package](https://github.com/cid15/aem-groovy-console/releases/download/17.0.0/aem-groovy-console-17.0.0.zip).  For previous versions, tags can be checked out from GitHub and built directly from the source (e.g. `mvn install`).
 
-2. [Verify](http://localhost:4502/apps/groovyconsole.html) the installation.
+2. [Verify](http://localhost:4502/groovyconsole) the installation.
 
 Additional build profiles may be added in the project's `pom.xml` to support deployment to non-localhost AEM servers.
-
-To enable access to the Groovy Console from `/groovyconsole`, update the **Groovy Console Configuration Service** via the [OSGi console configuration page](http://localhost:4502/system/console/configMgr) to enable the vanity path.
 
 ## Building From Source
 
 To build and install the latest development version of the Groovy Console (or if you've made source modifications), run the following Maven command.
 
     mvn install -P local
-
-## Excluding the Groovy OSGi Bundle
-
-If your AEM instance has multiple applications using Groovy and the `groovy-all` bundle is already deployed, you can exclude this bundle from the Groovy Console package build with the `exclude-groovy-bundle` Maven profile.  This should prevent issues with conflicting Groovy versions at runtime.
-
-    mvn install -P local,exclude-groovy-bundle
-
-## Context Path Support
-
-If you are running AEM with a context path, set the Maven property `aem.context.path` during installation.
-
-    mvn install -P local -Daem.context.path=/context
 
 ## OSGi Configuration
 
@@ -63,7 +51,6 @@ Email Enabled? | Check to enable email notification on completion of script exec
 Email Recipients | Email addresses to receive notification. | `[]`
 Script Execution Allowed Groups | List of group names that are authorized to use the console.  By default, only the 'admin' user has permission to execute scripts. | `[]`
 Scheduled Jobs Allowed Groups | List of group names that are authorized to schedule jobs.  By default, only the 'admin' user has permission to schedule jobs. | `[]`
-Vanity Path Enabled? | Enables `/groovyconsole` vanity path. | `false`
 Audit Disabled? | Disables auditing of script execution history. | `false`
 Display All Audit Records? | If enabled, all audit records (including records for other users) will be displayed in the console history. | `false`
 Thread Timeout | Time in seconds that scripts are allowed to execute before being interrupted.  If 0, no timeout is enforced. | 0 

@@ -24,13 +24,6 @@ interface ConfigurationService {
     boolean hasScheduledJobPermission(SlingHttpServletRequest request)
 
     /**
-     * Get the Groovy Console URL.
-     *
-     * @return URL to the Groovy Console on the current instance
-     */
-    String getConsoleHref()
-
-    /**
      * Check if email is enabled.
      *
      * @return true if email is enabled

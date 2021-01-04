@@ -18,10 +18,6 @@ import org.osgi.service.metatype.annotations.Designate
 @Slf4j("LOG")
 class DefaultConfigurationService implements ConfigurationService {
 
-    private static final String DEFAULT_PATH = "/apps/groovyconsole.html"
-
-    private static final String VANITY_PATH = "/groovyconsole"
-
     @Reference
     private ResourceResolverFactory resourceResolverFactory
 
@@ -32,8 +28,6 @@ class DefaultConfigurationService implements ConfigurationService {
     private Set<String> allowedGroups
 
     private Set<String> allowedScheduledJobsGroups
-
-    private boolean vanityPathEnabled
 
     private boolean auditDisabled
 
@@ -49,11 +43,6 @@ class DefaultConfigurationService implements ConfigurationService {
     @Override
     boolean hasScheduledJobPermission(SlingHttpServletRequest request) {
         isAdminOrAllowedGroupMember(request, allowedScheduledJobsGroups)
-    }
-
-    @Override
-    String getConsoleHref() {
-        vanityPathEnabled ? VANITY_PATH : DEFAULT_PATH
     }
 
     @Override
@@ -89,7 +78,6 @@ class DefaultConfigurationService implements ConfigurationService {
         emailRecipients = (properties.emailRecipients() ?: []).findAll() as Set
         allowedGroups = (properties.allowedGroups() ?: []).findAll() as Set
         allowedScheduledJobsGroups = (properties.allowedScheduledJobsGroups() ?: []).findAll() as Set
-        vanityPathEnabled = properties.vanityPathEnabled()
         auditDisabled = properties.auditDisabled()
         displayAllAuditRecords = properties.auditDisplayAll()
         threadTimeout = properties.threadTimeout()
