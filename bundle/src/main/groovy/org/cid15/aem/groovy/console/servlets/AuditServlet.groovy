@@ -51,7 +51,6 @@ class AuditServlet extends AbstractJsonResponseServlet {
 
     private Map<String, Object> getAuditRecordsData(SlingHttpServletRequest request) {
         def auditRecords = getAuditRecords(request)
-        def consoleHref = configurationService.consoleHref
 
         [data: auditRecords.collect { auditRecord ->
             [
@@ -62,7 +61,7 @@ class AuditServlet extends AbstractJsonResponseServlet {
                 script: auditRecord.script,
                 data: auditRecord.data,
                 exception: auditRecord.exception,
-                link: "$consoleHref?userId=${auditRecord.userId}&script=${auditRecord.relativePath}",
+                queryString: "?userId=${auditRecord.userId}&script=${auditRecord.relativePath}",
                 relativePath: auditRecord.relativePath,
                 downloadUrl: auditRecord.downloadUrl
             ]

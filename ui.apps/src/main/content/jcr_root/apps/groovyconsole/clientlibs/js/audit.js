@@ -62,7 +62,7 @@ GroovyConsole.Audit = function () {
                         $('td:eq(1)', row).html('<span class="glyphicon glyphicon-floppy-save" title="Download Output"></span>');
                     }
 
-                    $('td:eq(2)', row).html('<a href="' + data.link + '">' + data.date + '</a>');
+                    $('td:eq(2)', row).html('<a href="/groovyconsole' + data.queryString + '">' + data.date + '</a>');
                     $('td:eq(4)', row).html('<code>' + data.scriptPreview + '</code><div class="hidden">' + data.script + '</div>');
                     $('td:eq(4)', row).popover({
                         container: 'body',
