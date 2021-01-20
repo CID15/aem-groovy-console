@@ -54,6 +54,14 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-all</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.icfolson.aem.groovy.extension</groupId>
+            <artifactId>aem-groovy-extension-bundle</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.cid15.aem.groovy.console</groupId>
             <artifactId>aem-groovy-console-bundle</artifactId>
             <version>${project.version}</version>
