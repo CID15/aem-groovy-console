@@ -55,12 +55,6 @@
                             <type>zip</type>
                             <target>/apps/aem-groovy-console-packages/application/install</target>
                         </embedded>
-                        <embedded>
-                            <groupId>org.cid15.aem.groovy.console</groupId>
-                            <artifactId>aem-groovy-console-ui.content</artifactId>
-                            <type>zip</type>
-                            <target>/apps/aem-groovy-console-packages/content/install</target>
-                        </embedded>
                     </embeddeds>
                 </configuration>
             </plugin>
@@ -200,12 +194,6 @@
         <dependency>
             <groupId>org.cid15.aem.groovy.console</groupId>
             <artifactId>aem-groovy-console-ui.config</artifactId>
-            <version>${project.version}</version>
-            <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>org.cid15.aem.groovy.console</groupId>
-            <artifactId>aem-groovy-console-ui.content</artifactId>
             <version>${project.version}</version>
             <type>zip</type>
         </dependency>
