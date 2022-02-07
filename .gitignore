@@ -2,6 +2,7 @@
 .idea
 *.iml
 *.iws
+*.versionsBackup
 .project
 .metadata
 .classpath

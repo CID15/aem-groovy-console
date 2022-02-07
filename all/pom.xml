@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.cid15.aem.groovy.console</groupId>
         <artifactId>aem-groovy-console</artifactId>
-        <version>17.1.0-SNAPSHOT</version>
+        <version>18.0.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>aem-groovy-console-all</artifactId>
