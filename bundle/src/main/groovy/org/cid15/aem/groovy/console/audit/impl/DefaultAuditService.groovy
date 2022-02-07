@@ -133,7 +133,7 @@ class DefaultAuditService implements AuditService {
 
     @Override
     List<AuditRecord> getAllScheduledJobAuditRecords() {
-        getAllAuditRecords(GroovyConsoleConstants.SYSTEM_USER_NAME)
+        getAllAuditRecords(GroovyConsoleConstants.SERVICE_USER_NAME)
     }
 
     @Override
