@@ -9,6 +9,7 @@ GroovyConsole.Audit = function () {
     return {
         initialize: function () {
             table = $('.audit').DataTable({
+                retrieve: true,
                 ajax: AUDIT_URL,
                 columns: [
                     {
