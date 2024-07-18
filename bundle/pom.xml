@@ -8,12 +8,11 @@
     <parent>
         <groupId>org.cid15.aem.groovy.console</groupId>
         <artifactId>aem-groovy-console</artifactId>
-        <version>17.1.0-SNAPSHOT</version>
+        <version>18.0.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>aem-groovy-console-bundle</artifactId>
     <name>AEM Groovy Console - Bundle</name>
-    <packaging>bundle</packaging>
 
     <build>
         <resources>
@@ -32,35 +31,41 @@
                 <artifactId>maven-compiler-plugin</artifactId>
             </plugin>
             <plugin>
-                <groupId>org.apache.felix</groupId>
-                <artifactId>maven-bundle-plugin</artifactId>
-                <inherited>true</inherited>
-                <extensions>true</extensions>
+                <groupId>biz.aQute.bnd</groupId>
+                <artifactId>bnd-maven-plugin</artifactId>
+                <version>${bnd.version}</version>
                 <executions>
                     <execution>
-                        <id>generate-manifest</id>
+                        <id>bnd-process</id>
                         <goals>
-                            <goal>manifest</goal>
+                            <goal>bnd-process</goal>
                         </goals>
+                        <configuration>
+                            <bnd><![CDATA[
+Import-Package: javax.annotation;version=0.0.0,*
+Export-Package: !*.impl,org.cid15.aem.groovy.console.*
+Sling-Model-Packages: org.cid15.aem.groovy.console.components
+DynamicImport-Package: *
+                                ]]></bnd>
+                        </configuration>
                     </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>biz.aQute.bnd</groupId>
+                <artifactId>bnd-baseline-maven-plugin</artifactId>
+                <version>${bnd.version}</version>
+                <configuration>
+                    <failOnMissing>false</failOnMissing>
+                </configuration>
+                <executions>
                     <execution>
-                        <id>bundle</id>
+                        <id>baseline</id>
                         <goals>
-                            <goal>bundle</goal>
+                            <goal>baseline</goal>
                         </goals>
                     </execution>
                 </executions>
-                <configuration>
-                    <unpackBundle>true</unpackBundle>
-                    <instructions>
-                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-                        <Bundle-Name>${project.name}</Bundle-Name>
-                        <Bundle-Vendor>${project.organization.name}</Bundle-Vendor>
-                        <Export-Package>!*.impl,org.cid15.aem.groovy.console.*</Export-Package>
-                        <Sling-Model-Packages>org.cid15.aem.groovy.console.components</Sling-Model-Packages>
-                        <DynamicImport-Package>*</DynamicImport-Package>
-                    </instructions>
-                </configuration>
             </plugin>
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -94,6 +99,15 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
+                    </archive>
+                </configuration>
             </plugin>
         </plugins>
     </build>
