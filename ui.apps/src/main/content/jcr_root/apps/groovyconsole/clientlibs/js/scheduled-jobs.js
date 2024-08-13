@@ -1,6 +1,6 @@
 GroovyConsole.ScheduledJobs = function () {
 
-    var JOBS_URL = '/bin/groovyconsole/jobs.json';
+    var JOBS_URL = CQ.shared.HTTP.getContextPath() + '/bin/groovyconsole/jobs.json';
 
     var DOM = "<'row panel-row'<'col-sm-6'l><'col-sm-6'f>><'row'<'col-sm-12'tr>><'row panel-row'<'col-sm-5'i><'col-sm-7'p>>";
 

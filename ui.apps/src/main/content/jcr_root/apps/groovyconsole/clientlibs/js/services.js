@@ -1,5 +1,5 @@
 $(function () {
-    $.getJSON('/bin/groovyconsole/services', function (services) {
+    $.getJSON(CQ.shared.HTTP.getContextPath() + '/bin/groovyconsole/services', function (services) {
         $('#services-list').typeahead({
             source: Object.keys(services),
             updater: function (key) {
