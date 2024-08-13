@@ -5,7 +5,7 @@ import com.google.common.net.MediaType
 
 class GroovyConsoleConstants {
 
-    public static final String SYSTEM_USER_NAME = "groovy-console-system-user"
+    public static final String SYSTEM_USER_NAME = "aem-groovy-console-service"
 
     public static final String PATH_CONSOLE_ROOT = "/var/groovyconsole"
 

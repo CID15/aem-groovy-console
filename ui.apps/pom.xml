@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.cid15.aem.groovy.console</groupId>
         <artifactId>aem-groovy-console</artifactId>
-        <version>17.0.0</version>
+        <version>18.0.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>aem-groovy-console-ui.apps</artifactId>
@@ -23,7 +23,6 @@
                     <group>${package.group}</group>
                     <name>aem-groovy-console-ui.apps</name>
                     <packageType>application</packageType>
-                    <accessControlHandling>merge</accessControlHandling>
                     <properties>
                         <cloudManagerTarget>none</cloudManagerTarget>
                     </properties>
@@ -33,11 +32,6 @@
                             <artifactId>aem-groovy-console-ui.apps.structure</artifactId>
                         </repositoryStructurePackage>
                     </repositoryStructurePackages>
-                    <validatorsSettings>
-                        <jackrabbit-nodetypes>
-                            <isDisabled>true</isDisabled>
-                        </jackrabbit-nodetypes>
-                    </validatorsSettings>
                 </configuration>
             </plugin>
             <plugin>

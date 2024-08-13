@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.cid15.aem.groovy.console</groupId>
         <artifactId>aem-groovy-console</artifactId>
-        <version>17.0.0</version>
+        <version>18.0.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>aem-groovy-console-ui.content</artifactId>
@@ -17,7 +17,6 @@
             <plugin>
                 <groupId>org.apache.jackrabbit</groupId>
                 <artifactId>filevault-package-maven-plugin</artifactId>
-                <extensions>true</extensions>
                 <configuration>
                     <group>${package.group}</group>
                     <name>aem-groovy-console-ui.content</name>
@@ -27,10 +26,6 @@
                         <cloudManagerTarget>none</cloudManagerTarget>
                     </properties>
                     <validatorsSettings>
-                        <!-- disable nodetype validation as workaround until JCRVLT-463 got fixed -->
-                        <jackrabbit-nodetypes>
-                            <isDisabled>true</isDisabled>
-                        </jackrabbit-nodetypes>
                         <jackrabbit-filter>
                             <options>
                                 <validRoots>/conf</validRoots>
