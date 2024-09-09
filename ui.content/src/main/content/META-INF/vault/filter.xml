@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workspaceFilter version="1.0">
-    <filter root="/home/users/system/groovy-console-system-user"/>
     <filter root="/var/groovyconsole" mode="merge"/>
     <filter root="/rep:policy"/>
 </workspaceFilter>

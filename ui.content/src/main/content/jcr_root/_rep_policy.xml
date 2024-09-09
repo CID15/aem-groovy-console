@@ -3,6 +3,6 @@
           jcr:primaryType="rep:ACL">
     <allow
         jcr:primaryType="rep:GrantACE"
-        rep:principalName="groovy-console-system-user"
+        rep:principalName="aem-groovy-console-service"
         rep:privileges="{Name}[jcr:all]"/>
 </jcr:root>
