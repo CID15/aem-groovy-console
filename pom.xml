@@ -5,7 +5,7 @@
     <groupId>org.cid15.aem.groovy.console</groupId>
     <artifactId>aem-groovy-console</artifactId>
     <packaging>pom</packaging>
-    <version>18.0.2-SNAPSHOT</version>
+    <version>18.0.2</version>
     <name>AEM Groovy Console</name>
     <description>
         The AEM Groovy Console provides an interface for running Groovy scripts in the AEM container. Scripts can be
@@ -48,7 +48,7 @@
         <connection>scm:git:git@github.com:cid15/aem-groovy-console.git</connection>
         <developerConnection>scm:git:git@github.com:cid15/aem-groovy-console.git</developerConnection>
         <url>https://github.com/cid15/aem-groovy-console</url>
-      <tag>HEAD</tag>
+      <tag>aem-groovy-console-18.0.2</tag>
   </scm>
 
     <issueManagement>
