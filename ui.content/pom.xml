@@ -21,7 +21,6 @@
                     <group>${package.group}</group>
                     <name>aem-groovy-console-ui.content</name>
                     <packageType>content</packageType>
-                    <accessControlHandling>merge</accessControlHandling>
                     <properties>
                         <cloudManagerTarget>none</cloudManagerTarget>
                     </properties>
