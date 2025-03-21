@@ -2,6 +2,8 @@
 
 [CID 15](https://www.cid15.org)
 
+_Note: this project is no longer being actively maintained.  Please see the fork here for the latest updates: https://github.com/orbinson/aem-groovy-console_
+
 ## Overview
 
 The AEM Groovy Console provides an interface for running [Groovy](http://www.groovy-lang.org/) scripts in Adobe Experience Manager.  Scripts can be created to manipulate content in the JCR, call OSGi services, or execute arbitrary code using the AEM, Sling, or JCR APIs.  After installing the package in AEM (instructions below), see the [console page](http://localhost:4502/groovyconsole) for documentation on the available bindings and methods.  Sample scripts are included in the package for reference.
