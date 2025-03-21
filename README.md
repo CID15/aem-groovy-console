@@ -2,7 +2,8 @@
 
 [CID 15](https://www.cid15.org)
 
-_Note: this project is no longer being actively maintained.  Please see the fork here for the latest updates: https://github.com/orbinson/aem-groovy-console_
+> [!WARNING]
+> This project is no longer being actively maintained.  Please see the fork here for the latest updates: https://github.com/orbinson/aem-groovy-console
 
 ## Overview
 
